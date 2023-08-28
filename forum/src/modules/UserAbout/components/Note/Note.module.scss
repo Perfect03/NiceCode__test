@@ -1,0 +1,13 @@
+.note {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    .text {
+        font-size: 14px;
+        line-height: 24px;
+        .date {
+            margin-right: 10px;
+            color: #616F82;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.options {
+    padding: 15px 10px 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .count {
+            width: 28px;
+            height: 18px;
+            border-radius: 9px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 500;
+            color: white;
+            background-color: #616F82;
+            &.active {
+                background-color: #4198C5;
+            }
+        }
+    }
+    .right {
+        display: flex;
+        .do {
+            color: #616F82;
+            margin-left: 15px;
+            font-size: 14px;
+            line-height: 20px;
+            cursor: pointer;
+        }
+    }
+}

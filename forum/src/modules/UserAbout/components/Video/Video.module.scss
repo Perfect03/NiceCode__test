@@ -1,0 +1,38 @@
+.video {
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid #CDCDCD;
+    height: 66px;
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .image {
+            width: 82px;
+            height: 46px;
+        }
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .name {
+                font-size: 14px;
+                color: #616F82;
+            }
+        }
+    }
+    .right {
+        align-self:flex-end;
+        .date {
+            color: #616F82;
+            font-size: 14px;
+        }
+    }
+    &:hover {
+        border: 1px solid #4198C5;
+        cursor: pointer;
+    }
+}
