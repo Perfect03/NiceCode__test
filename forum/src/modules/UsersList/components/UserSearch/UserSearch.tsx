@@ -5,7 +5,7 @@ function UserSearch() {
   return (
     <form className={styles.form}>
       <div className={styles.searchBar}>
-        <button className={styles.loupe}>
+        <button className={styles.loupe} onClick={(e) => e.preventDefault()}>
           <svg
             width="16"
             height="16"
@@ -29,7 +29,7 @@ function UserSearch() {
           </svg>
         </button>
         <input type="text" placeholder="" />
-        <button className={styles.filter}>
+        <button className={styles.filter} onClick={(e) => e.preventDefault()}>
           <svg
             width="18"
             height="17"
@@ -50,7 +50,7 @@ function UserSearch() {
           </svg>
         </button>
       </div>
-      <button className={styles.plus}>
+      <button className={styles.plus} onClick={(e) => e.preventDefault()}>
         <svg
           width="14"
           height="14"
