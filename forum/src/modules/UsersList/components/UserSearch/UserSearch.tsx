@@ -1,7 +1,16 @@
 import React from 'react';
+import { observer } from 'mobx-react-lite';
+import usersState from '../../../../store/users';
 import styles from './UserSearch.module.scss';
 
-function UserSearch() {
+const UserSearch = observer(() => {
+  function handleSearch(event: React.ChangeEvent<HTMLInputElement>) {
+    usersState.setFilter(event.target.value);
+  }
+  function resetInput(e: React.MouseEvent<HTMLElement>) {
+    e.preventDefault();
+    usersState.setFilter('');
+  };
   return (
     <form className={styles.form}>
       <div className={styles.searchBar}>
@@ -28,8 +37,8 @@ function UserSearch() {
             </defs>
           </svg>
         </button>
-        <input type="text" placeholder="" />
-        <button className={styles.filter} onClick={(e) => e.preventDefault()}>
+        <input type="text" placeholder="" value={usersState.filter} onChange={handleSearch} />
+        <button className={styles.filter} onClick={(e) => {e.preventDefault()}}>
           <svg
             width="18"
             height="17"
@@ -50,7 +59,7 @@ function UserSearch() {
           </svg>
         </button>
       </div>
-      <button className={styles.plus} onClick={(e) => e.preventDefault()}>
+      <button className={styles.plus} onClick={resetInput}>
         <svg
           width="14"
           height="14"
@@ -68,6 +77,6 @@ function UserSearch() {
       </button>
     </form>
   );
-}
+})
 
 export default UserSearch;

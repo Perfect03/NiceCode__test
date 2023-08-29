@@ -1532,6 +1532,7 @@ class UsersState {
     },
   ];
   count = 12;
+  filter = '';
   allChecked = false;
   active = 2;
   select = false;
@@ -1552,6 +1553,9 @@ class UsersState {
   }
   setSelect() {
     this.select = !this.select;
+  }
+  setFilter(str: string) {
+    this.filter = str;
   }
 }
 

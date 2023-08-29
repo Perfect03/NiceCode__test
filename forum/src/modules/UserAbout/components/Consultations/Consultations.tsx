@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styles from './Consultations.module.scss';
-import etc from '../../../../assets/etc.svg';
 import { IUser } from '../../../../interfaces&types/interfaces&types';
 import Consultation from '../Consultation/Consultation';
 

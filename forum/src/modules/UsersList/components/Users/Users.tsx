@@ -8,7 +8,7 @@ const Users = observer(() => {
   const users = usersState.users;
   return (
     <div className={styles.users}>
-      {users.map((el) => (
+      {users.filter(elem => elem.name?.includes(usersState.filter)).map((el) => (
         <div
           onClick={(e) => {
             usersState.setActive(el.id);
