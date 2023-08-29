@@ -10,7 +10,7 @@ const UserSearch = observer(() => {
   function resetInput(e: React.MouseEvent<HTMLElement>) {
     e.preventDefault();
     usersState.setFilter('');
-  };
+  }
   return (
     <form className={styles.form}>
       <div className={styles.searchBar}>
@@ -38,7 +38,12 @@ const UserSearch = observer(() => {
           </svg>
         </button>
         <input type="text" placeholder="" value={usersState.filter} onChange={handleSearch} />
-        <button className={styles.filter} onClick={(e) => {e.preventDefault()}}>
+        <button
+          className={styles.filter}
+          onClick={(e) => {
+            e.preventDefault();
+          }}
+        >
           <svg
             width="18"
             height="17"
@@ -77,6 +82,6 @@ const UserSearch = observer(() => {
       </button>
     </form>
   );
-})
+});
 
 export default UserSearch;

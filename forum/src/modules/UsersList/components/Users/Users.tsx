@@ -8,16 +8,18 @@ const Users = observer(() => {
   const users = usersState.users;
   return (
     <div className={styles.users}>
-      {users.filter(elem => elem.name?.includes(usersState.filter)).map((el) => (
-        <div
-          onClick={(e) => {
-            usersState.setActive(el.id);
-          }}
-          key={el.id}
-        >
-          <User user={el} selected={el.id == usersState.active}></User>
-        </div>
-      ))}
+      {users
+        .filter((elem) => elem.name?.includes(usersState.filter))
+        .map((el) => (
+          <div
+            onClick={(e) => {
+              usersState.setActive(el.id);
+            }}
+            key={el.id}
+          >
+            <User user={el} selected={el.id == usersState.active}></User>
+          </div>
+        ))}
     </div>
   );
 });
