@@ -1,0 +1,56 @@
+@mixin _710 {
+    @media (max-width: 710px){
+        @content;
+    }
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    color: #616F82;
+    font-size: 14px;
+    padding: 10px;
+    min-height: 46px;
+    ul {
+        padding-top: 3px;
+        display: flex;
+        line-height: 20px;
+        li {
+            padding: 0 20px;
+            border-left: 2px solid #CDCDCD;
+            cursor: pointer;
+            transition: all 0.25s;
+            &.active {
+                color: #4198C5;
+            }
+        }
+        li:first-child {
+            padding-left: 0;
+            border-left: 0;
+        }
+        @include _710 {
+            width: 320px;
+            flex-wrap: wrap;
+        }
+    }
+    .new {
+        display: flex;
+        align-items: center;
+        > * {
+            margin-right: 10px;
+        }
+        .label {
+            cursor: pointer;
+        }
+        .plus {
+            cursor: pointer;
+            width: 26px;
+            height: 26px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #616F82;
+            border-radius: 50%;
+        }
+    }
+}
